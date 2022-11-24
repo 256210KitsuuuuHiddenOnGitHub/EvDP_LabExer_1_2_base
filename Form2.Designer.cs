@@ -36,6 +36,9 @@
             this.lblGender = new System.Windows.Forms.Label();
             this.lblContactNum = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
+            this.lblFileName = new System.Windows.Forms.Label();
+            this.txtBoxFileName = new System.Windows.Forms.TextBox();
+            this.btnSaveNameFile = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblName
@@ -111,7 +114,7 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(123, 328);
+            this.btnSubmit.Location = new System.Drawing.Point(242, 383);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(154, 39);
             this.btnSubmit.TabIndex = 7;
@@ -119,11 +122,41 @@
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
+            // lblFileName
+            // 
+            this.lblFileName.AutoSize = true;
+            this.lblFileName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblFileName.Location = new System.Drawing.Point(12, 328);
+            this.lblFileName.Name = "lblFileName";
+            this.lblFileName.Size = new System.Drawing.Size(108, 28);
+            this.lblFileName.TabIndex = 8;
+            this.lblFileName.Text = "File Name: ";
+            // 
+            // txtBoxFileName
+            // 
+            this.txtBoxFileName.Location = new System.Drawing.Point(120, 332);
+            this.txtBoxFileName.Name = "txtBoxFileName";
+            this.txtBoxFileName.Size = new System.Drawing.Size(276, 27);
+            this.txtBoxFileName.TabIndex = 9;
+            // 
+            // btnSaveNameFile
+            // 
+            this.btnSaveNameFile.Location = new System.Drawing.Point(12, 383);
+            this.btnSaveNameFile.Name = "btnSaveNameFile";
+            this.btnSaveNameFile.Size = new System.Drawing.Size(154, 39);
+            this.btnSaveNameFile.TabIndex = 10;
+            this.btnSaveNameFile.Text = "Save File";
+            this.btnSaveNameFile.UseVisualStyleBackColor = true;
+            this.btnSaveNameFile.Click += new System.EventHandler(this.btnSaveNameFile_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(408, 381);
+            this.ClientSize = new System.Drawing.Size(408, 434);
+            this.Controls.Add(this.btnSaveNameFile);
+            this.Controls.Add(this.txtBoxFileName);
+            this.Controls.Add(this.lblFileName);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.lblContactNum);
             this.Controls.Add(this.lblGender);
@@ -149,5 +182,8 @@
         private Label lblGender;
         private Label lblContactNum;
         private Button btnSubmit;
+        private Label lblFileName;
+        private TextBox txtBoxFileName;
+        private Button btnSaveNameFile;
     }
 }

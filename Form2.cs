@@ -16,6 +16,8 @@ namespace EvDP_03LabExer1_10252022
         public Form2()
         {
             InitializeComponent();
+            //Disable Temporarily
+            btnSubmit.Enabled = false;
         }
 
         private void lblName_Click(object sender, EventArgs e)
@@ -45,7 +47,7 @@ namespace EvDP_03LabExer1_10252022
             //face minus points
             try
             {
-                int cN = Convert.ToInt32(ContactNum), sN = Convert.ToInt32(studentNum);
+                long cN = Convert.ToInt64(ContactNum), sN = Convert.ToInt64(studentNum);
                 lblStudnum.Text = "Student No. : " + sN.ToString();
                 lblContactNum.Text = "Contact No. : " + cN.ToString();
             }
@@ -64,8 +66,34 @@ namespace EvDP_03LabExer1_10252022
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+            //New: Put on FileStream
+            //Create Directory
+            FileInfo take = new FileInfo(@"D:\" + txtBoxFileName.Text.ToString() + ".txt");
+
+            //Open File and Set read and Write Mode
+            FileStream thisTxt = take.Open(FileMode.OpenOrCreate, FileAccess.Write, FileShare.Read);
+
+            //Put Text Here
+            //not gonna use Flush() for demonstration Purposes, flush uses realtime while write uses desired
+            StreamWriter streamMe = new StreamWriter(thisTxt);
+            streamMe.Write(lblStudnum.Text.ToString() + "\n" +
+                lblName.Text.ToString() + "\n" + lblProgram.Text.ToString()+"\n" +
+                lblAge.Text.ToString()+ "\n" + lblBDAY.Text.ToString() + "\n" + lblGender.Text.ToString() + "\n" +
+                lblContactNum.Text.ToString());
+            streamMe.Close();
+
             //Close button
             this.Close();
+        }
+
+        private void btnSaveNameFile_Click(object sender, EventArgs e)
+        {
+            //Enable Submit Button
+            btnSubmit.Enabled = true;
+
+            //And Disable
+            txtBoxFileName.Enabled = false;
+            btnSaveNameFile.Enabled = false;
         }
     }
 
