@@ -49,6 +49,7 @@
             this.txtBoxContactNumber = new System.Windows.Forms.TextBox();
             this.dtBday = new System.Windows.Forms.DateTimePicker();
             this.registerButton = new System.Windows.Forms.Button();
+            this.btnRecords = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -249,11 +250,23 @@
             this.registerButton.UseVisualStyleBackColor = true;
             this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
             // 
+            // btnRecords
+            // 
+            this.btnRecords.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnRecords.Location = new System.Drawing.Point(718, 328);
+            this.btnRecords.Name = "btnRecords";
+            this.btnRecords.Size = new System.Drawing.Size(179, 45);
+            this.btnRecords.TabIndex = 21;
+            this.btnRecords.Text = "Records";
+            this.btnRecords.UseVisualStyleBackColor = true;
+            this.btnRecords.Click += new System.EventHandler(this.btnRecords_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(909, 385);
+            this.Controls.Add(this.btnRecords);
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.dtBday);
             this.Controls.Add(this.txtBoxContactNumber);
@@ -306,5 +319,6 @@
         private TextBox txtBoxContactNumber;
         private DateTimePicker dtBday;
         private Button registerButton;
+        private Button btnRecords;
     }
 }

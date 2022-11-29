@@ -59,5 +59,13 @@ namespace EvDP_03LabExer1_10252022
             checkBMale.Checked = false;
             this.gender = "Female";
         }
+
+        private void btnRecords_Click(object sender, EventArgs e)
+        {
+            //Open frmStudentRecord Window
+            frmStudentRecord frs = new frmStudentRecord();
+            frs.ShowDialog();
+        }
+
     }
 }

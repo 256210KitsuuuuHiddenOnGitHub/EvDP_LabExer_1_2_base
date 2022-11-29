@@ -1,6 +1,6 @@
 ﻿namespace EvDP_03LabExer1_10252022
 {
-    partial class Error
+    partial class SystemMessage
     {
         /// <summary>
         /// Required designer variable.
@@ -40,15 +40,17 @@
             this.errorText.Size = new System.Drawing.Size(221, 24);
             this.errorText.TabIndex = 0;
             this.errorText.Text = "Invalid Input Detected.";
+            this.errorText.Click += new System.EventHandler(this.errorText_Click);
             // 
-            // Error
+            // SystemMessage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(241, 65);
             this.Controls.Add(this.errorText);
-            this.Name = "Error";
+            this.Name = "SystemMessage";
             this.Text = "Error";
+            this.Load += new System.EventHandler(this.SystemMessage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

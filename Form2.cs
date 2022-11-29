@@ -52,7 +52,7 @@ namespace EvDP_03LabExer1_10252022
             catch(FormatException num)
             {
                 //Say Something
-                Error frm3 = new Error();
+                SystemMessage frm3 = new SystemMessage();
                 frm3.ShowDialog();
                 //Then Set Default on System Instead
                 //and disable submit button
